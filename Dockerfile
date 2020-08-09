@@ -1,5 +1,8 @@
 FROM alpine
 
+LABEL maintainer="mrasong <i@mrasong.com>" \
+    description="mdbtools"
+
 RUN apk --no-cache add wget ca-certificates \
     autoconf \
     automake \
