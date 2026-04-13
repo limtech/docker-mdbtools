@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.11
 
 LABEL maintainer="mrasong <i@mrasong.com>" \
     description="mdbtools"
@@ -14,8 +14,8 @@ RUN apk --no-cache add wget ca-certificates \
     linux-headers \
     bison flex-dev unixodbc unixodbc-dev txt2man \
     unrar p7zip && \
-	cd /tmp && \
-  	wget "https://github.com/brianb/mdbtools/archive/0.7.1.zip" && \
+    cd /tmp && \
+    wget "https://github.com/brianb/mdbtools/archive/0.7.1.zip" && \
     unzip 0.7.1.zip && rm 0.7.1.zip && \
     cd mdbtools-0.7.1 && \
     autoreconf -i -f && \

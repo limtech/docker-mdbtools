@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.11
 
 LABEL maintainer="mrasong <i@mrasong.com>" \
     description="mdbtools with mariadb client"
